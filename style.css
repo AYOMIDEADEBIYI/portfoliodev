@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+:root {
+    --main-color: #2D033B;
+    --primary-color: #E5B8FA;
+    --secondary-color: #C147E9;
+    --sub-color: #810CA8;
+
+}
+
+body {
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    font-family: "Roboto", serif;
+    /* font-family: "Poppins", serif; */
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*=== scrollbar ===*/
+
+::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+::selection {
+    background-color: white;
+}
+
+/* == */
+
+.container {
+    padding: 18px 34px;
+}
+
+.section-title {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.5rem;
+
+}
+
+.section-title span {
+    color: #C147E9;
+}
+
+/*================= header =================*/
+
+header {
+    width: 100%;
+    padding: 13px 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1111;
+    transition: .5s ease-in-out;
+}
+
+header .logo a {
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+    font-family: 'Fenix', serif;
+}
+
+header ul {
+    display: flex;
+    margin: 0;
+}
+
+header ul li {
+    margin: 0px 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    display: block;
+    transition: .4s;
+    font-size: 1.2rem;
+}
+
+header ul li a:hover {
+    color: var(--primary-color);
+}
+
+header .bars {
+    display: none;
+}
+
+header .bars img {
+    width: 30px;
+    cursor: pointer;
+}
+
+header.active {
+    background: #FFF;
+    box-shadow: 0px 1px 0px #DDD;
+}
+
+header.active a:hover {
+    color: var(--secondary-color);
+}
+
+header.active .logo a {
+    color: #810CA8;
+}
+
+header.active ul li a {
+    color: black;
+    /* border-color: #207178; */
+}
+
+header.active #bar {
+    background: black;
+    color: #207178;
+    padding: 4px 5px;
+    width: 33px;
+}
+
+@media(max-width: 991px) {
+
+    /* #about {
+        height: 113vh;
+    } */
+    header .navigation {
+        display: block;
+        height: 100vh;
+        width: 50%;
+        background: rgba(0, 0, 0, .5);
+        position: absolute;
+        top: 68px;
+        right: -50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: .5s ease-in-out;
+    }
+
+
+    header.active .navigation {
+        background: #bdb3b3db;
+        box-shadow: -1px 0px 0px #DDD;
+    }
+
+    header .navigation li {
+        margin: 15px 0px;
+    }
+
+    header .bars {
+        display: block;
+    }
+}
+
+@media(max-width: 576px) {
+    header {
+        padding: 13px 30px;
+    }
+
+    header .navigation.new {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+/*============ about ============*/
+
+#About {
+    background-color: black;
+    height: 100vh;
+}
+
+
+.about {
+    padding-top: 30%;
+}
+
+small {
+    color: var(--secondary-color);
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    padding: 18px 0;
+    color: var(--sub-color);
+}
+
+.about p {
+    color: rgb(207 205 205);
+    width: 100%;
+    margin-bottom: 15px;
+    line-height: 2;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+button {
+    padding: 18px 19px;
+    background-color: var(--main-color);
+    color: white;
+    margin: 12px 0;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/*================= projects =================*/
+
+img {
+    width: 100%;
+}
+
+.box {
+    background-color: var(--main-color);
+    padding: 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    width: 100%;
+    color: white;
+}
+
+.box img {
+    height: 50vh;
+    object-fit: cover;
+}
+
+.box h3 {
+    color: #C147E9;
+    font-size: 1.5rem;
+}
+
+.box h3,
+p {
+    padding-top: 16px;
+}
+
+.demo {
+    background-color: white;
+    color: black;
+}
+
+.demo:hover {
+    color: white;
+}
+
+/*============== skills ==============*/
+
+.skills {
+    padding: 93px 66px;
+}
+
+.skills .text {
+    justify-content: space-between;
+    margin: auto;
+}
+
+.details-form {
+    width: 165px;
+    margin: auto;
+
+}
+
+.flex-details {
+    display: flex;
+
+    padding-bottom: 40px;
+}
+
+.flex-details svg {
+    fill: #C147E9;
+}
+#contact, #project {
+    padding: 40px 0 0;
+}
+
+/*=============== contact ===============*/
+
+.form {
+    padding-top: 12px;
+}
+
+input {
+    padding: 7px 11px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+
+
+textarea {
+    width: 100%;
+    height: 15rem;
+    padding: 7px 11px;
+    resize: none;
+}
+
+/*=============== footer ===============*/
+
+footer {
+    background-color: #000;
+    padding-top: 90px;
+    color: white;
+}
+
+/*== copyright ==*/
+.copy {
+    text-align: center;
+}
+
+/*=== -- ===*/
+
+.span {
+    color: #C147E9;
+}
+/* .active {
+    color: red;
+
+} */
+
+.svg {
+    padding-bottom: 12px;
+}
+
+footer svg {
+    gap: 2rem;
+    fill: white;
+    cursor: pointer;
+
+}
+
+.svg-icon img {
+    height: 68px;
+}
+
+.icon-btn-flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.icon-btn-flex img {
+    fill: white;
+}
+
+.skills-flex {
+    text-align: center;
+}
+
+.skills-flex svg {
+    fill: orange;
+    height: 100%;
+}
+
+#css {
+    fill: blue;
+}
+
+#java {
+    fill: yellow;
+}
+
+svg:hover {
+    fill: #C147E9;
+    transition: .5s ease-in-out;
+
+}
+
+
+/*========= top to back button =========*/
+
+.top {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 1;
+    border: 2px solid blueviolet;
+    border-radius: 50%;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    display: none;
+}
+
+.top svg {
+    font-size: 20px;
+    vertical-align: middle;
+    fill: var(--sub-color);
+}
+
+.top:hover {
+    background: var(--main-color);
+    box-shadow: 0px 0px 1px 1px var(--main-color);
+    /* border-color: #f9f9f9; */
+    color: #FFF;
+    fill: white;
+}
+
+.top:hover svg {
+    fill: white;
+}
+i {
+    font-size: 5rem;
+}
+
+/*============== tablet ==============*/
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 18px 100px;
+    }
+
+    .box h3 {
+        font-size: 1.7rem;
+    }
+
+    /* #about {
+        height: 113vh;
+    } */
+    .box-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2rem;
+    }
+
+    .about {
+        padding-top: 23%;
+    }
+
+    .about h1 {
+        font-size: 4rem;
+    }
+
+    header {
+        padding: 14px 96px;
+    }
+
+    .skills .text {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    .flex-form {
+        display: flex;
+    }
+
+    .details-box {
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    .text {
+        margin: auto;
+        /* width: 50%; */
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .about h1 {
+        font-size: 4rem;
+    }
+
+}
+
+/*=========== laptop============== */
+
+@media screen and (min-width: 1400px) {
+    .box-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 2rem;
+    }
+
+    .about {
+        padding-top: 22%;
+    }
+
+    .about h1 {
+        font-size: 4rem;
+    }
+
+    .skills .text {
+        display: flex;
+        gap: 3rem;
+    }
+}
+
+/*============ For smaller screen============ */
+
+@media only screen and (max-width: 438px) {
+    /* body {
+        width: min-content;
+    } */
+
+    header .navigation {
+        height: 134vh;
+    }
+}
+/* padding: 40px 0 0; */
+
+@media only screen and (min-width: 2560px) {
+    #about {
+        height: 100vh;
+    }
+
+    .about h1 {
+        font-size: 10rem;
+
+    }
+
+    .about p {
+        font-size: 2rem;
+    }
+
+    small {
+        font-size: 2rem;
+    }
+
+    .about {
+        padding-top: 19%;
+    }
+
+    .about button {
+        font-size: 1.6rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+}
+
+.svg-icon svg {
+    fill: var(--secondary-color);
+    cursor: pointer;
+}
