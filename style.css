@@ -69,7 +69,7 @@ header {
     padding: 13px 50px;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: #000000eb;
     align-items: center;
     position: fixed;
     top: 0;
@@ -191,7 +191,7 @@ header.active #bar {
 /*============ about ============*/
 
 #About {
-    background-color: black;
+    background-color: #000000eb;
     height: 100vh;
 }
 
